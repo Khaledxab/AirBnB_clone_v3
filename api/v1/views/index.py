@@ -1,25 +1,20 @@
 #!/usr/bin/python3
 """Index.py"""
-from api.v1.views import app_views
+
 from flask import jsonify
+from api.v1.views import app_views
 from models import storage
 
 
 @app_views.route('/status')
 def status():
-    """_summary_
-    Returns:
-    _type_: _description_
-    """
+    """fix doccccc"""
     return jsonify(status="OK")
 
 
 @app_views.route('/stats')
 def stat():
-    """_summary_
-    Returns:
-        _type_: _description_
-    """    
+    """fix docccccc"""   
     classes = {
         "amenities": "Amenity",
         "cities": "City",
@@ -32,6 +27,3 @@ def stat():
     for cls in classes:
         counter[cls] = storage.count(classes[cls])
     return jsonify(counter)
-
-if __name__ == "__main__":
-    pass
