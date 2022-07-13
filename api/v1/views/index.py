@@ -7,11 +7,13 @@ from models import storage
 
 @app_views.route('/status')
 def status():
+    """status"""
     return jsonify(status="OK")
 
 
 @app_views.route('/stats')
 def stat():
+    """stats"""
     classes = {
         "amenities": "Amenity",
         "cities": "City",
