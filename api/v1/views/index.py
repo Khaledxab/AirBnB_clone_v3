@@ -7,13 +7,19 @@ from models import storage
 
 @app_views.route('/status')
 def status():
-    """status"""
+    """_summary_
+    Returns:
+    _type_: _description_
+    """
     return jsonify(status="OK")
 
 
 @app_views.route('/stats')
 def stat():
-    """stats"""
+    """_summary_
+    Returns:
+        _type_: _description_
+    """    
     classes = {
         "amenities": "Amenity",
         "cities": "City",
